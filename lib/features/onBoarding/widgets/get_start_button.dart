@@ -12,7 +12,7 @@ class GetStartButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: () {
-        Navigator.pushReplacementNamed(context, RouteNames.loginScreen);
+
       },
       child: Container(
         alignment: Alignment.center,
@@ -22,7 +22,7 @@ class GetStartButton extends StatelessWidget {
             color: ColorsApp.mainBlue, borderRadius: BorderRadius.circular(16)),
         child: Text(
           "Get Started",
-          style: TextStyles.font16white600weight,
+          style: TextStyles.font16whiteSemiBold,
         ),
       ),
     );
