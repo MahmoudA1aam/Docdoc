@@ -1,6 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/theming/text_style.dart';
+import '../../../../core/routing/route_names.dart';
+import '../../../../core/theming/text_style.dart';
 
 class AlreadyHaveAccountText extends StatelessWidget {
   const AlreadyHaveAccountText({super.key});
@@ -15,10 +17,14 @@ class AlreadyHaveAccountText extends StatelessWidget {
             style: TextStyles.font11DarkBlueRegular,
           ),
           TextSpan(
-            text: " Sign Up",
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                Navigator.pushReplacementNamed(context, RouteNames.loginScreen);
+              },
+            text: " Login",
             style: TextStyles.font11MainBlueRegular,
           ),
-
         ]));
+    ;
   }
 }

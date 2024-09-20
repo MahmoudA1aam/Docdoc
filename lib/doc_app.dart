@@ -1,7 +1,9 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:docdoc_app/core/routing/app_router.dart';
 import 'package:docdoc_app/core/routing/route_names.dart';
 import 'package:docdoc_app/core/theming/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DocApp extends StatelessWidget {
@@ -23,6 +25,7 @@ class DocApp extends StatelessWidget {
           primaryColor: ColorsApp.mainBlue,
           scaffoldBackgroundColor: Colors.white,
         ),
+        builder: EasyLoading.init(builder: BotToastInit()),
       ),
     );
   }

@@ -42,6 +42,10 @@ class TextStyles {
       fontSize: 11.sp,
       fontWeight: FontWeightHelper.regular,
       color: ColorsApp.darkBlue);
+  static TextStyle font13DarkBlueRegular = TextStyle(
+      fontSize: 13.sp,
+      fontWeight: FontWeightHelper.regular,
+      color: ColorsApp.darkBlue);
   static TextStyle font11MainBlueRegular = TextStyle(
       fontSize: 11.sp,
       fontWeight: FontWeightHelper.regular,

@@ -17,11 +17,17 @@ class CustomTextFormField extends StatelessWidget {
       this.keyboardType,
       this.fillColor,
       this.filedColorBackground,
-      required this.hintText});
+      this.errorBorder,
+      this.focusedErrorBorder,
+      required this.validator,
+      required this.hintText,
+      required this.controller});
 
   final EdgeInsetsGeometry? contentPadding;
   final InputBorder? focusedBorder;
   final InputBorder? enabledBorder;
+  final InputBorder? focusedErrorBorder;
+  final InputBorder? errorBorder;
   final TextStyle? hintStyle;
   final TextStyle? inputTextStyle;
   final String hintText;
@@ -30,10 +36,16 @@ class CustomTextFormField extends StatelessWidget {
   final Color? fillColor;
   final bool? filedColorBackground;
   final TextInputType? keyboardType;
+  final TextEditingController controller;
+  final Function(String?) validator;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      validator: (value) {
+        return validator(value);
+      },
+      controller: controller,
       cursorColor: ColorsApp.mainBlue,
       obscureText: obscureText ?? false,
       style: TextStyles.font14DartBlueMedium,
@@ -47,6 +59,20 @@ class CustomTextFormField extends StatelessWidget {
           hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
           hintText: hintText,
           isDense: true,
+          errorBorder: errorBorder ??
+              OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(16),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1.3,
+                  )),
+          focusedErrorBorder: focusedErrorBorder ??
+              OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(16),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1.3,
+                  )),
           focusedBorder: focusedBorder ??
               OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
