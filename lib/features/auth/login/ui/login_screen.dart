@@ -2,8 +2,6 @@ import 'package:docdoc_app/core/theming/colors.dart';
 import 'package:docdoc_app/core/theming/text_style.dart';
 import 'package:docdoc_app/core/widgets/custom_text_button.dart';
 
-import 'package:docdoc_app/data/login/models/login_request_body_model.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

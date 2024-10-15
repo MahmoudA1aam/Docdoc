@@ -18,14 +18,14 @@ class LoginBlocListener extends StatelessWidget {
         if (state is LoginLoadingState) {
           EasyLoading.show();
         } else if (state is LoginErrorState) {
-          if(state.apiErrorModel.message=="Credentials doesn`t match our records"){
+          if (state.apiErrorModel.message ==
+              "Credentials doesn`t match our records") {
             EasyLoading.dismiss();
             SnackBarService.showErrorMessage("check your email and password");
-          }else{
+          } else {
             EasyLoading.dismiss();
             SnackBarService.showErrorMessage(state.apiErrorModel.message!);
           }
-
         } else if (state is LoginSuccessState) {
           EasyLoading.dismiss();
           SnackBarService.showSuccessMessage(
@@ -34,7 +34,7 @@ class LoginBlocListener extends StatelessWidget {
           Navigator.pushReplacementNamed(context, RouteNames.homeScreen);
         }
       },
-      child: SizedBox.shrink(),
+      child: const SizedBox.shrink(),
     );
   }
 }

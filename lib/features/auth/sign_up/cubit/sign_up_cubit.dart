@@ -21,13 +21,15 @@ class SignUpCubit extends Cubit<SignUpState> {
   void signUp(SignUpRequestBodyModel signUpRequestBodyModel) async {
     if (formKey.currentState!.validate()) {
       emit(SignUpLoadingState(loadingMessage: "Loading..."));
-      final response=await signUpRepo.signUp(signUpRequestBodyModel);
-       response.when(success: (data) {
-        emit(SignUpSuccessState(response: data));
-      }, failure: (errorMessage) {
-        emit(SignUpErrorState(errorMessage: errorMessage));
-      },);
-
+      final response = await signUpRepo.signUp(signUpRequestBodyModel);
+      response.when(
+        success: (data) {
+          emit(SignUpSuccessState(response: data));
+        },
+        failure: (errorMessage) {
+          emit(SignUpErrorState(errorMessage: errorMessage));
+        },
+      );
     }
   }
 }

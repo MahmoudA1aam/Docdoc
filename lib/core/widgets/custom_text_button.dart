@@ -29,7 +29,7 @@ class CustomTextButton extends StatelessWidget {
       padding: EdgeInsets.zero,
       child: Container(
         alignment: Alignment.center,
-        width: double.infinity,
+        width: buttonWidth ?? double.infinity,
         height: buttonHeight ?? 52.h,
         decoration: BoxDecoration(
             color: backgroundColor ?? ColorsApp.mainBlue,

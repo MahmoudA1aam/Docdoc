@@ -2,6 +2,7 @@ import 'package:docdoc_app/core/di/dependency_injection.dart';
 import 'package:docdoc_app/core/routing/route_names.dart';
 import 'package:docdoc_app/features/auth/sign_up/cubit/sign_up_cubit.dart';
 import 'package:docdoc_app/features/auth/sign_up/ui/sign_up_screen.dart';
+import 'package:docdoc_app/features/home_screen/cubit/home_cubit.dart';
 import 'package:docdoc_app/features/home_screen/ui/home_screen.dart';
 
 import 'package:docdoc_app/features/onBoarding/onBoarding_screen.dart';
@@ -16,22 +17,26 @@ class AppRouter {
     switch (settings.name) {
       case RouteNames.onBoardingScreen:
         return MaterialPageRoute(
-          builder: (context) => Onboardingscreen(),
+          builder: (context) => const Onboardingscreen(),
         );
       case RouteNames.loginScreen:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
-              create: (context) => getIt<LoginCubit>(), child: LoginScreen()),
+              create: (context) => getIt<LoginCubit>(),
+              child: const LoginScreen()),
         );
       case RouteNames.homeScreen:
         return MaterialPageRoute(
-          builder: (context) => HomeScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<HomeCubit>()..getSpecializationData(),
+            child: const HomeScreen(),
+          ),
         );
       case RouteNames.signUpScreen:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
             create: (context) => getIt<SignUpCubit>(),
-            child: SignUpScreen(),
+            child: const SignUpScreen(),
           ),
         );
       default:

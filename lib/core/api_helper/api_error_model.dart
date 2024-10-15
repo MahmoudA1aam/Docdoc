@@ -18,8 +18,9 @@ class ApiErrorModel {
   Map<String, dynamic> toJson() => _$ApiErrorModelToJson(this);
 
   String getAllErrorMessage() {
-    if (errors == null && errors!.isNotEmpty)
+    if (errors == null && errors!.isNotEmpty) {
       return message ?? "Unknown Error Occurred";
+    }
 
     final errorMessage = errors!.entries.map((entry) {
       final value = entry.value;

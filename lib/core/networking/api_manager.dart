@@ -1,18 +1,13 @@
-import 'dart:convert';
-
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:docdoc_app/core/api_helper/api_constants.dart';
 
-import 'package:docdoc_app/core/api_helper/api_error_model.dart';
 import 'package:docdoc_app/data/login/models/login_response_model.dart';
 import 'package:docdoc_app/data/sign_up/models/sign_up_request_body_model.dart';
 import 'package:docdoc_app/data/sign_up/models/sign_up_response_model.dart';
 import 'package:retrofit/http.dart';
 
 import '../../data/login/models/login_request_body_model.dart';
-import 'package:either_dart/either.dart';
-import 'package:http/http.dart' as https;
+import '../helper/shared_perf_helper.dart';
 
 part 'api_manager.g.dart';
 

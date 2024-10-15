@@ -48,13 +48,12 @@ class SignUpScreen extends StatelessWidget {
                   SizedBox(
                     height: 25.h,
                   ),
-
                   CustomTextButton(
                       buttonText: "Create Account",
                       onPressed: () {
                         context.read<SignUpCubit>().signUp(
                             SignUpRequestBodyModel(
-
+                                gender: "0",
                                 name: context
                                     .read<SignUpCubit>()
                                     .nameController

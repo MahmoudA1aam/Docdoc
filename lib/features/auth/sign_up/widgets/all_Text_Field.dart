@@ -151,7 +151,7 @@ class _AllTextFieldState extends State<AllTextField> {
               }
             },
             hintText: "rePassword",
-            obscureText:isObscureText ,
+            obscureText: isObscureText,
             suffixIcon: GestureDetector(
               onTap: () {
                 setState(() {

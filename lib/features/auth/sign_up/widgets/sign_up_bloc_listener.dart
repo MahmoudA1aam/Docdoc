@@ -22,7 +22,8 @@ class SignUpBlocListener extends StatelessWidget {
           EasyLoading.show();
         } else if (state is SignUpErrorState) {
           EasyLoading.dismiss();
-          SnackBarService.showErrorMessage(state.errorMessage!.getAllErrorMessage());
+          SnackBarService.showErrorMessage(
+              state.errorMessage!.getAllErrorMessage());
         } else if (state is SignUpSuccessState) {
           EasyLoading.dismiss();
           SnackBarService.showSuccessMessage("${state.response.message}");
@@ -32,6 +33,5 @@ class SignUpBlocListener extends StatelessWidget {
       },
       child: SizedBox.shrink(),
     );
-    ;
   }
 }

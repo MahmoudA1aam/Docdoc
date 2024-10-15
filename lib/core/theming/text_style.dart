@@ -30,10 +30,14 @@ class TextStyles {
       fontSize: 14.sp,
       fontWeight: FontWeightHelper.medium,
       color: ColorsApp.darkBlue);
+  static TextStyle font14DartBlueBold = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeightHelper.bold,
+      color: ColorsApp.darkBlue);
   static TextStyle font12MainBlueRegular = TextStyle(
       fontSize: 12.sp,
       fontWeight: FontWeightHelper.regular,
-      color: ColorsApp.mainBlue);
+      color: ColorsApp.darkBlue);
   static TextStyle font11GrayRegular = TextStyle(
       fontSize: 11.sp,
       fontWeight: FontWeightHelper.regular,
@@ -50,4 +54,24 @@ class TextStyles {
       fontSize: 11.sp,
       fontWeight: FontWeightHelper.regular,
       color: ColorsApp.mainBlue);
+  static TextStyle font18DarkBlueBold = TextStyle(
+      fontSize: 18.sp,
+      color: ColorsApp.darkBlue,
+      fontWeight: FontWeightHelper.bold);
+  static TextStyle font18DarkBlueSemiBold = TextStyle(
+      fontSize: 18.sp,
+      color: ColorsApp.darkBlue,
+      fontWeight: FontWeightHelper.semiBold);
+  static TextStyle font18witheMedium = TextStyle(
+      fontSize: 18.sp,
+      color: Colors.white,
+      fontWeight: FontWeightHelper.medium);
+  static TextStyle font16DarkBlueBold = TextStyle(
+      fontSize: 16.sp,
+      color: ColorsApp.darkBlue,
+      fontWeight: FontWeightHelper.bold);
+  static TextStyle font12GrayMedium = TextStyle(
+      fontSize: 16.sp,
+      color: ColorsApp.gray,
+      fontWeight: FontWeightHelper.medium);
 }

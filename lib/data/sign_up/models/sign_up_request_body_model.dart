@@ -14,13 +14,17 @@ class SignUpRequestBodyModel {
   final String rePassword;
   @JsonKey(name: "phone")
   final String phone;
+  @JsonKey(name: "gender")
+  final String gender;
 
-  SignUpRequestBodyModel(
-      {required this.name,
-      required this.email,
-      required this.password,
-      required this.rePassword,
-      required this.phone});
+  SignUpRequestBodyModel({
+    required this.name,
+    required this.email,
+    required this.password,
+    required this.rePassword,
+    required this.phone,
+    required this.gender,
+  });
 
   Map<String, dynamic> toJson() => _$SignUpRequestBodyModelToJson(this);
 }

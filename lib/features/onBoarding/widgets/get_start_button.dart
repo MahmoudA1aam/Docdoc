@@ -1,5 +1,3 @@
-import 'package:docdoc_app/core/routing/app_router.dart';
-import 'package:docdoc_app/core/routing/route_names.dart';
 import 'package:docdoc_app/core/theming/colors.dart';
 import 'package:docdoc_app/core/theming/text_style.dart';
 import 'package:flutter/material.dart';
@@ -11,9 +9,7 @@ class GetStartButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {
-
-      },
+      onPressed: () {},
       child: Container(
         alignment: Alignment.center,
         width: 311.w,
